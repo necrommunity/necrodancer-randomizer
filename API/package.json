@@ -1,0 +1,10 @@
+{
+  "name": "necrodancer-randomizer-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "randomizer-server.js",
+  "author": "",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}

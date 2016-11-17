@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'necrosansregular';
+    src: url('necrosans-webfont.woff2') format('woff2'),
+         url('necrosans-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+	font-family: 'necrosansregular';
+	margin: 50px auto;
+	width: 70rem;
+	background: black;
+	color: white;
+}

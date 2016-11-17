@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ND Randomizer</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<h1>Necrodancer Randomizer</h1>
+	<label for="seed">Seed:</label>
+	<input id="seed" name="seed" type="text" placeholder="13375330" oninput="document.getElementById('link').href='http://necrommunity.ovh:3007/randomizer/'+this.value;" />
+
+	<a href="http://necrommunity.ovh:3007/randomizer/" download id="link">Download</a>
+</body>
+</html>
