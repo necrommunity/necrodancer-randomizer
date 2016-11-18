@@ -22,8 +22,10 @@ Prerequisite: [Node.js installed](https://docs.npmjs.com/getting-started/install
 ```javascript
 var randomizer = require('./randomizer');
 
-var xml = randomizer({
+randomizer({
 	seed: 13375330
+}).then(function(xml) {
+	// Do stuff
 });
 ```
 ## Available options
