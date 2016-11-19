@@ -90,6 +90,10 @@ var randomizeND = function(options) {
                         if(ranEnemy.optionalStats) enemies[enemy][i].optionalStats = ranEnemy.optionalStats;
                         else if(isMiniboss) enemies[enemy][i].optionalStats = [{$:{}}];
                         if(ranEnemy.bouncer) enemies[enemy][i].bouncer = ranEnemy.bouncer;
+                        if(ranEnemy.stats[0].$.movement == "custom") { 
+                            // custom movement on enemies without it doesn't work
+                            ranEnemy.stats[0].$.movement = enemies[enemy][i].stats[0].$.movement;
+                        }
                         enemies[enemy][i].stats = ranEnemy.stats;
                         // if "fair" and movement 1 every beat lower health or damage
                         if(!options.unfair) {
