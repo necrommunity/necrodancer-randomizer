@@ -97,13 +97,8 @@ var randomizeND = function(options) {
                         enemies[enemy][i].stats = ranEnemy.stats;
                         // if "fair" and movement 1 every beat lower health or damage
                         if(!options.unfair) {
-                            if(enemies[enemy][i].stats[0].$.beatsPerMove=="1" && (parseInt(enemies[enemy][i].stats[0].$.damagePerHit) > 1 || enemies[enemy][i].stats[0].$.health == "1")) {
-                                if(Math.floor(Math.random() * 3) == 0) {
-                                    enemies[enemy][i].stats[0].$.health = "1";
-                                } else {
-                                    enemies[enemy][i].stats[0].$.damagePerHit = "1";
-                                    enemies[enemy][i].stats[0].$.health = "2";
-                                }
+                            if(enemies[enemy][i].stats[0].$.beatsPerMove=="1") {
+                                enemies[enemy][i].stats[0].$.health = "1";
                             }
                         }
                         if(enemies[enemy][i].optionalStats) {
