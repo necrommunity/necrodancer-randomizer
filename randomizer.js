@@ -12,6 +12,8 @@ var randomProperty = function (obj) {
 
 var banned = ['gargoyle', 'ghost'];
 
+var aoeEnemies = ['yeti', 'mushroom'];
+
 var bannedItems = [];
 
 var getRandomEnemy = function(clone) {
@@ -94,8 +96,12 @@ var randomizeND = function(options) {
                             ranEnemy.stats[0].$.movement = enemies[enemy][i].stats[0].$.movement;
                         }
                         enemies[enemy][i].stats = ranEnemy.stats;
-                        // if "fair" and movement 1 every beat lower health or damage
                         if(!options.unfair) {
+                            // if "fair" aoe enemies can't have every beat movement
+                            if(aoeEnemies.indexOf(enemy) != -1 && enemies[enemy][i].stats[0].$.beatsPerMove=="1") {
+                                enemies[enemy][i].stats[0].$.beatsPerMove = "2";
+                            }
+                            // if "fair" and movement 1 every beat lower health
                             if(enemies[enemy][i].stats[0].$.beatsPerMove=="1") {
                                 enemies[enemy][i].stats[0].$.health = "1";
                             }
