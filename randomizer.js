@@ -163,6 +163,8 @@ var randomizeND = function(options) {
                     fs.writeFile(options.dest || __dirname + '/necrodancer.xml', xml);
                 }
 
+                console.log(Date()+' - Generated XML for seed: '+options.seed);
+
                 resolve(xml);
 
             });
