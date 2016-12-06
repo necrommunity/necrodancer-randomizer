@@ -57,9 +57,8 @@ var getRandomItem = function(clone) {
 
 
 var randomizeND = function(options) {
-    if(options.seed) {
-        seedrandom(options.seed, { global: true });
-    }
+    options.seed = options.seed || (Math.floor(Math.random() * 16777217)).toString();
+    seedrandom(options.seed, { global: true });
 
     var promise = new Promise(function(resolve, reject) {
         fs.readFile(__dirname + '/necrodancer-original.xml', function(err, data) {
@@ -90,7 +89,7 @@ var randomizeND = function(options) {
                         if(ranEnemy.optionalStats) enemies[enemy][i].optionalStats = ranEnemy.optionalStats;
                         else if(isMiniboss) enemies[enemy][i].optionalStats = [{$:{}}];
                         if(ranEnemy.bouncer) enemies[enemy][i].bouncer = ranEnemy.bouncer;
-                        if(ranEnemy.stats[0].$.movement == "custom") { 
+                        if(ranEnemy.stats[0].$.movement == "custom") {
                             // custom movement on enemies without it doesn't work
                             ranEnemy.stats[0].$.movement = enemies[enemy][i].stats[0].$.movement;
                         }
@@ -142,6 +141,8 @@ var randomizeND = function(options) {
                 origXMLObj.necrodancer.items[0] = items;
                 var builder = new xml2js.Builder();
                 var xml = builder.buildObject(origXMLObj);
+
+                xml = '<!-- seed: '+options.seed+' -->\n' + xml;
 
                 if(options.writeFile) {
                     fs.writeFile(options.dest || __dirname + '/necrodancer.xml', xml);
