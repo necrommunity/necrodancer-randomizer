@@ -14,7 +14,7 @@
 		<coins_x15 levelEditor="False" flyaway="|324|COIN MULTIPLIER +0.5|" hint="|324|COIN MULTIPLIER +0.5|" diamondCost="5">coins_x15.png</coins_x15>
 		<coins_x2 levelEditor="False" flyaway="|325|COIN MULTIPLIER +1|" hint="|325|COIN MULTIPLIER +1|" diamondCost="8">coins_x2.png</coins_x2>
 		<feet_ballet_shoes flyaway="|326|BALLET SHOES|" hint="|516|STAND STILL, KEEP MULTIPLIER|" slot="feet" coinCost="25" lockedChestChance="50" lockedShopChance="100" diamondDealable="1" unlocked="true">feet_ballet_shoes.png</feet_ballet_shoes>
-		<feet_boots_speed flyaway="|327|BOOTS OF SPEED|" hint="|517|DOUBLE TIME|" slot="feet" coinCost="200">feet_boots_speed.png</feet_boots_speed>
+		<feet_boots_speed levelEditor="False" flyaway="|327|BOOTS OF SPEED|" hint="|517|DOUBLE TIME|" slot="feet" coinCost="200">feet_boots_speed.png</feet_boots_speed>
 		<feet_boots_winged flyaway="|328|WINGED BOOTS|" hint="|518|LEVITATION|" slot="feet" coinCost="50" lockedChestChance="100" lockedShopChance="100" diamondDealable="2" unlocked="true">feet_boots_winged.png</feet_boots_winged>
         <feet_boots_explorers flyaway="|329|EXPLORERS BOOTS|" hint="|519|HELPS WITH SOME TERRAIN|" slot="feet" coinCost="15" shopChance="2|35" chestChance="2|10|10|0" diamondDealable="1" unlocked="true">feet_boots_explorers.png</feet_boots_explorers>
         <feet_boots_lead flyaway="|330|LEAD BOOTS|" hint="|520|HELPS WITH TRAPS AND ICE|" slot="feet" imageH="25" coinCost="15" shopChance="2|35" chestChance="2|10|10|0" diamondDealable="1" unlocked="true">feet_boots_lead.png</feet_boots_lead>
@@ -146,7 +146,7 @@
 		<torch_glass flyaway="|437|GLASS TORCH|" slotPriority="0" hint="|601|MAGIC VISION, BREAKABLE|" slot="torch" coinCost="30" diamondCost="6" isTorch="True" isGlass="True" imageW="24" imageH="27" data="3" chestChance="2|15|30|100" shopChance="2|25|75|100" diamondDealable="3">torch_glass.png</torch_glass>
 		<torch_infernal flyaway="|438|INFERNAL TORCH|" slotPriority="0" hint="|602|CONSUMES TORCHES ON WALLS|" slot="torch" coinCost="30" diamondCost="5" isTorch="True" data="1" chestChance="2|10|20|100" shopChance="2|45|90|100" diamondDealable="3">torch_infernal.png</torch_infernal>
 		<torch_obsidian flyaway="|439|OBSIDIAN TORCH|" slotPriority="0" hint="|603|MULTIPLIER-BASED LIGHT|" slot="torch" coinCost="20" diamondCost="3" isTorch="True" numFrames="3" imageW="24" imageH="27" data="1" chestChance="10|40|25" shopChance="10|20|5" diamondDealable="3">torch_obsidian.png</torch_obsidian>
-		
+
         <!-- WEAPONS -->
 		<weapon_flower slot="weapon" hint="|440|FLOWER|" coinCost="1" flyaway="|440|FLOWER|" isWeapon="True" chestChance="0" shopChance="0">weapon_flower.png</weapon_flower>
         <weapon_golden_lute levelEditor="False" slot="weapon" hint="|441|GOLDEN LUTE|" coinCost="1" flyaway="|441|GOLDEN LUTE|" isWeapon="True" isPiercing="True" chestChance="0" shopChance="0" imageW="30" imageH="25">weapon_golden_lute.png</weapon_golden_lute>
@@ -220,14 +220,14 @@
 
 	<!--
 	*** ALGORITHM FOR DETERMINING PRIORITY VALUES ***
-	
+
 	1 for not massive, 2 for massive, 3 for miniboss, 4 for boss
 	00 to 99 for damage
 	00 to 99 for health
 	0 to 9 for speed
 	00 to 99 for coins
 	So a massive enemy with 90 damage, 80 health, 7 speed and 60 coins would be: 29080760
-	
+
 	Some enemies have their values set manually, for other gameplay reasons, like exploding mushrooms, red dragons, and the conga line zombies.
 	-->
 	<enemies>
