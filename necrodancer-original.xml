@@ -500,21 +500,21 @@
 			<stats beatsPerMove="2" coinsToDrop="5" damagePerHit="2" health="2" priority="99999996" movement="custom" />
 			<particle hit="particles/TEMP_particle_blood.png" />
 		</blademaster>
-		<cauldron type="1" id="217">
+		<cauldron type="1" id="217" friendlyName="Fire Cauldron Mimic">
 			<spritesheet numFrames="2" frameW="24" frameH="24" xOff="0" yOff="6" heartYOff="-8">entities/cauldron_coals.png</spritesheet>
 			<frame inSheet="1" inAnim="1" animType="normal" singleFrame="True" />
 			<stats beatsPerMove="1" coinsToDrop="0" damagePerHit="1" health="1" movement="custom" />
 			<particle hit="particles/TEMP_particle_red.png" />
 			<optionalStats bounceOnMovementFail="False" />
 		</cauldron>
-		<cauldron type="2" id="218">
+		<cauldron type="2" id="218" friendlyName="Ice Cauldorn Mimic">
 			<spritesheet numFrames="2" frameW="24" frameH="24" xOff="0" yOff="6" heartYOff="-8">entities/cauldron_ice.png</spritesheet>
 			<frame inSheet="1" inAnim="1" animType="normal" singleFrame="True" />
 			<stats beatsPerMove="1" coinsToDrop="0" damagePerHit="1" health="1" movement="custom" />
 			<particle hit="particles/TEMP_particle_blue.png" />
 			<optionalStats bounceOnMovementFail="False" />
 		</cauldron>
-        <clone type="1" id="112">
+        <clone type="1" id="112" friendlyName="Clone">
 			<spritesheet numFrames="8" frameW="24" frameH="24" xOff="0" yOff="2">entities/clone.png</spritesheet>
 			<frame inSheet="1" inAnim="1" animType="normal" onFraction="0.99" offFraction="0.09" />
 			<frame inSheet="2" inAnim="2" animType="normal" onFraction="0.69" offFraction="0.99" />
@@ -695,7 +695,7 @@
 			<stats beatsPerMove="1" coinsToDrop="0" damagePerHit="0" health="1" priority="10401102" movement="custom" />
 			<particle hit="particles/TEMP_particle_gray.png" />
 		</gargoyle>
-		<ghast type="1" id="214">
+		<ghast type="1" id="214" friendlyName="Ghast">
 			<spritesheet numFrames="6" frameW="24" frameH="24">entities/ghast.png</spritesheet>
 			<frame inSheet="1" inAnim="1" animType="normal" onFraction="0.14" offFraction="0.99" />
 			<frame inSheet="2" inAnim="2" animType="normal" onFraction="0.99" offFraction="0.14" />
@@ -799,7 +799,7 @@
             <optionalStats massive="True" />
 			<particle hit="particles/TEMP_particle_dirt.png" />
 		</golem>
-		<harpy type="1" id="308">
+		<harpy type="1" id="308" friendlyName="Harpy">
 			<spritesheet numFrames="8" frameW="41" frameH="32" xOff="-9" yOff="-13" zOff="30" heartYOff="-7">entities/harpy.png</spritesheet>
 			<frame inSheet="1" inAnim="1" animType="normal" onFraction="0.14" offFraction="0.99" />
 			<frame inSheet="2" inAnim="2" animType="normal" onFraction="0.99" offFraction="0.14" />
@@ -811,7 +811,7 @@
 			<bouncer min="-2.5" max="0" power="1.5" steps="15" />
 			<particle hit="particles/TEMP_particle_green.png" />
 		</harpy>
-		<hellhound type="1" id="211">
+		<hellhound type="1" id="211" friendlyName="Hellound">
 			<spritesheet numFrames="8" frameW="25" frameH="24" yOff="3">entities/hellhound.png</spritesheet>
 			<frame inSheet="2" inAnim="1" animType="normal" onFraction="0.99" offFraction="0.09" />
 			<frame inSheet="3" inAnim="2" animType="normal" onFraction="0.69" offFraction="0.99" />
@@ -929,7 +929,7 @@
 			<stats beatsPerMove="1" coinsToDrop="0" damagePerHit="0" health="4" priority="80000000" movement="custom" />
 			<particle hit="particles/TEMP_particle_green.png" />
 		</leprechaun>
-		<lich type="1" id="309">
+		<lich type="1" id="309" friendlyName="Lich">
 			<spritesheet numFrames="14" frameW="24" frameH="30">entities/lich.png</spritesheet>
 			<frame inSheet="1" inAnim="1" animType="normal" onFraction="0.14" offFraction="0.99" />
 			<frame inSheet="5" inAnim="2" animType="normal" onFraction="0.99" offFraction="0.14" />
@@ -1023,7 +1023,7 @@
 			<stats beatsPerMove="1" coinsToDrop="15" damagePerHit="5" health="5" priority="30505115" movement="custom" />
 			<optionalStats massive="True" miniboss="True" />
 		</minotaur>
-		<mole type="1" id="114">
+		<mole type="1" id="114" friendlyName="Mole">
 			<spritesheet numFrames="2" frameW="24" frameH="24" yOff="7">entities/mole.png</spritesheet>
 			<shadow>entities/TEMP_shadow_large.png</shadow>
 			<stats beatsPerMove="1" coinsToDrop="3" damagePerHit="2" health="1" priority="1020113" movement="custom" />
@@ -1091,7 +1091,7 @@
 			<stats beatsPerMove="4" coinsToDrop="15" damagePerHit="4" health="6" priority="30405215" movement="custom" />
 			<optionalStats massive="true" miniboss="True" />
 		</mommy>
-		<mummy id="321" type="1">
+		<mummy id="321" type="1" friendlyName="Mummy">
 			<spritesheet numFrames="14" frameW="14" frameH="14" xOff="5" yOff="8">entities/mummy.png</spritesheet>
 			<frame inSheet="4" inAnim="1" animType="normal" onFraction="0.99" offFraction="0.54" />
 			<frame inSheet="1" inAnim="2" animType="normal" onFraction="0.84" offFraction="0.99" />
@@ -1134,7 +1134,7 @@
 			<particle hit="particles/TEMP_particle_spore.png" />
 			<optionalStats bounceOnMovementFail="False" />
 		</mushroom>
-		<mushroom_light type="1" id="117">
+		<mushroom_light type="1" id="117" friendlyName="Mushroom Light">
 			<spritesheet numFrames="4" frameW="24" frameH="24" xOff="0" yOff="6">entities/mushroom_light.png</spritesheet>
 			<frame inSheet="1" inAnim="1" animType="normal" singleFrame="True" />
 			<stats beatsPerMove="1" coinsToDrop="0" damagePerHit="1" health="1" movement="custom" />
@@ -1195,7 +1195,7 @@
 			<particle hit="particles/TEMP_particle_black.png" />
 			<optionalStats massive="True" miniboss="True" />
 		</nightmare>
-		<ogre type="1" id="412">
+		<ogre type="1" id="412" friendlyName="Ogre">
 			<spritesheet numFrames="8" frameW="45" frameH="48" xOff="-11" yOff="-20" zOff="35" heartYOff="-21">entities/ogre.png</spritesheet>
 			<frame inSheet="3" inAnim="1" animType="normal" onFraction="0.99" offFraction="0.09" />
 			<frame inSheet="4" inAnim="2" animType="normal" onFraction="0.69" offFraction="0.99" />
@@ -1254,7 +1254,7 @@
 			<bouncer min="-2.5" max="0" power="1.5" steps="15" />
 			<tweens move="slide" moveShadow="slide" hit="slide" hitShadow="slide" />
 		</pawnbroker>
-		<pixie type="1" id="314">
+		<pixie type="1" id="314" friendlyName="Pixie">
 			<spritesheet numFrames="8" frameW="24" frameH="24" xOff="0" yOff="-4">entities/pixie.png</spritesheet>
 			<frame inSheet="4" inAnim="1" animType="normal" onFraction="0.99" offFraction="0.09" />
 			<frame inSheet="1" inAnim="2" animType="normal" onFraction="0.69" offFraction="0.99" />
@@ -1310,7 +1310,7 @@
 			<particle hit="particles/TEMP_particle_blue.png" />
 			<optionalStats boss="True" />
 		</rook>
-		<sarcophagus type="1" id="315">
+		<sarcophagus type="1" id="315" friendlyName="Sarcophagus">
 			<spritesheet numFrames="2" frameW="24" frameH="24" xOff="0" yOff="7">entities/sarcophagus.png</spritesheet>
 			<frame inSheet="1" inAnim="1" animType="normal" singleFrame="True" />
 			<stats beatsPerMove="8" coinsToDrop="5" damagePerHit="1" health="1" priority="10101805" movement="custom" />
@@ -1334,7 +1334,7 @@
 			<optionalStats bounceOnMovementFail="False" />
 			<shadow yOff="2">entities/TEMP_shadow_large.png</shadow>
 		</sarcophagus>
-		<shopkeeper type="1" id="600">
+		<shopkeeper type="1" id="600" friendlyName="Shopkeeper">
 			<spritesheet numFrames="16" frameW="47" frameH="38" xOff="-12" yOff="-10" heartYOff="-10" zOff="10">entities/shopkeeper.png</spritesheet>
 			<frame inSheet="1" inAnim="1" animType="normal" onFraction="0.14" offFraction="0.99" />
 			<frame inSheet="2" inAnim="2" animType="normal" onFraction="0.99" offFraction="0.14" />
@@ -1344,7 +1344,7 @@
 			<stats beatsPerMove="1" coinsToDrop="0" damagePerHit="20" health="9" priority="99999997" movement="custom" />
 			<optionalStats bounceOnMovementFail="False" />
 		</shopkeeper>
-		<shopkeeper type="2" id="601">
+		<shopkeeper type="2" id="601" friendlyName="Blood Shopkeeper">
 			<spritesheet numFrames="16" frameW="47" frameH="38" xOff="-12" yOff="-10" heartYOff="-10" zOff="10">entities/shopkeeper2.png</spritesheet>
 			<frame inSheet="1" inAnim="1" animType="normal" onFraction="0.14" offFraction="0.99" />
 			<frame inSheet="2" inAnim="2" animType="normal" onFraction="0.99" offFraction="0.14" />
@@ -1354,7 +1354,7 @@
 			<stats beatsPerMove="1" coinsToDrop="0" damagePerHit="20" health="8" priority="99999997" movement="custom" />
 			<optionalStats bounceOnMovementFail="False" />
 		</shopkeeper>
-		<shopkeeper type="3" id="602">
+		<shopkeeper type="3" id="602" friendlyName="Glass Shopkeeper">
 			<spritesheet numFrames="16" frameW="47" frameH="38" xOff="-12" yOff="-10" heartYOff="-10" zOff="10">entities/shopkeeper3.png</spritesheet>
 			<frame inSheet="1" inAnim="1" animType="normal" onFraction="0.14" offFraction="0.99" />
 			<frame inSheet="2" inAnim="2" animType="normal" onFraction="0.99" offFraction="0.14" />
@@ -1364,7 +1364,7 @@
 			<stats beatsPerMove="1" coinsToDrop="0" damagePerHit="20" health="8" priority="99999997" movement="custom" />
 			<optionalStats bounceOnMovementFail="False" />
 		</shopkeeper>
-		<shopkeeper type="4" id="603">
+		<shopkeeper type="4" id="603" friendlyName="Food Shopkeeper">
 			<spritesheet numFrames="16" frameW="47" frameH="38" xOff="-12" yOff="-10" heartYOff="-10" zOff="10">entities/shopkeeper4.png</spritesheet>
 			<frame inSheet="1" inAnim="1" animType="normal" onFraction="0.14" offFraction="0.99" />
 			<frame inSheet="2" inAnim="2" animType="normal" onFraction="0.99" offFraction="0.14" />
@@ -1399,7 +1399,7 @@
 			<tweens move="slide" moveShadow="slide" hit="slide" hitShadow="slide" />
 			<particle hit="particles/TEMP_particle_white.png" />
 		</shopkeeper_ghost>
-		<shovemonster type="1" id="212">
+		<shovemonster type="1" id="212" friendlyName="Shovemonster">
 			<spritesheet numFrames="8" frameW="26" frameH="26">entities/shovemonster.png</spritesheet>
 			<frame inSheet="2" inAnim="1" animType="normal" onFraction="0.99" offFraction="0.09" />
 			<frame inSheet="3" inAnim="2" animType="normal" onFraction="0.69" offFraction="0.99" />
@@ -1409,7 +1409,7 @@
 			<stats beatsPerMove="1" coinsToDrop="2" damagePerHit="0" health="2" priority="10002102" movement="basicSeek" />
 			<particle hit="particles/TEMP_particle_purple.png" />
 		</shovemonster>
-		<shovemonster type="2" id="219">
+		<shovemonster type="2" id="219" friendlyName="Gray Shovemonster">
 			<spritesheet numFrames="8" frameW="26" frameH="26">entities/shovemonster_gray.png</spritesheet>
 			<frame inSheet="2" inAnim="1" animType="normal" onFraction="0.99" offFraction="0.09" />
 			<frame inSheet="3" inAnim="2" animType="normal" onFraction="0.69" offFraction="0.99" />
@@ -1640,7 +1640,7 @@
 			<stats beatsPerMove="1" coinsToDrop="1" damagePerHit="3" health="1" priority="10301101" movement="custom" />
 			<particle hit="particles/TEMP_particle_orange.png" />
 		</slime>
-		<spider type="1" id="318">
+		<spider type="1" id="318" friendlyName="Spider">
 			<spritesheet numFrames="10" frameW="21" frameH="20" xOff="1" yOff="-2">entities/spider.png</spritesheet>
 			<frame inSheet="1" inAnim="1" animType="normal" onFraction="0.99" offFraction="0.09" />
 			<frame inSheet="2" inAnim="2" animType="normal" onFraction="0.69" offFraction="0.99" />
@@ -1651,7 +1651,7 @@
 			<particle hit="particles/TEMP_particle_orange.png" />
 			<optionalStats ignoreWalls="True"/>
 		</spider>
-		<tarmonster type="1" id="113">
+		<tarmonster type="1" id="113" friendlyName="Tar Monster">
 			<spritesheet numFrames="10" frameW="24" frameH="24" yOff="2">entities/tarmonster.png</spritesheet>
 			<shadow>entities/TEMP_shadow_standard.png</shadow>
 			<stats beatsPerMove="1" coinsToDrop="3" damagePerHit="3" health="1" priority="10304103" movement="custom" />
@@ -1852,7 +1852,7 @@
 			<optionalStats massive="True" miniboss="True" />
 			<particle hit="particles/TEMP_particle_white.png" />
 		</undead_santa>
-		<warlock type="1" id="319">
+		<warlock type="1" id="319" friendlyName="Warlock">
 			<spritesheet numFrames="8" frameW="26" frameH="31">entities/warlock.png</spritesheet>
 			<frame inSheet="1" inAnim="1" animType="normal" onFraction="0.99" offFraction="0.09" />
 			<frame inSheet="2" inAnim="2" animType="normal" onFraction="0.69" offFraction="0.99" />
@@ -1882,7 +1882,7 @@
 			<stats beatsPerMove="1" coinsToDrop="100" damagePerHit="20" health="10" movement="custom" />
 			<optionalStats bounceOnMovementFail="False" />
 		</weaponmaster>
-		<wight type="1" id="115">
+		<wight type="1" id="115" friendlyName="Wight">
 			<spritesheet numFrames="6" frameW="24" frameH="24">entities/wight.png</spritesheet>
 			<frame inSheet="1" inAnim="1" animType="normal" onFraction="0.14" offFraction="0.99" />
 			<frame inSheet="2" inAnim="2" animType="normal" onFraction="0.99" offFraction="0.14" />
@@ -1894,7 +1894,7 @@
 			<tweens move="slide" moveShadow="slide" hit="slide" hitShadow="slide" />
 			<particle hit="particles/TEMP_particle_white.png" />
 		</wight>
-		<wraith type="1" id="13">
+		<wraith type="1" id="13" friendlyName="Wraith">
 			<spritesheet numFrames="6" frameW="24" frameH="24">entities/wraith.png</spritesheet>
 			<frame inSheet="1" inAnim="1" animType="normal" onFraction="0.14" offFraction="0.99" />
 			<frame inSheet="2" inAnim="2" animType="normal" onFraction="0.99" offFraction="0.14" />
@@ -1906,13 +1906,13 @@
 			<tweens move="slide" moveShadow="slide" hit="slide" hitShadow="slide" />
 			<particle hit="particles/TEMP_particle_white.png" />
 		</wraith>
-        <yeti type="1" id="213">
+        <yeti type="1" id="213" friendlyName="Yeti">
 			<spritesheet numFrames="8" frameW="68" frameH="40" xOff="-22" yOff="-15" zOff="27" heartYOff="-19">entities/yeti.png</spritesheet>
 			<shadow>entities/TEMP_shadow_large.png</shadow>
 			<stats beatsPerMove="4" coinsToDrop="3" damagePerHit="3" health="1" priority="20301403" movement="basicSeek" />
 			<optionalStats massive="True" />
 		</yeti>
-		<zombie type="1" id="12">
+		<zombie type="1" id="12" friendlyName="Zombie">
 			<spritesheet numFrames="48" frameW="24" frameH="25">entities/zombie.png</spritesheet>
 			<frame inSheet="1" inAnim="1" animType="normal" onFraction="0.99" offFraction="0.09" />
 			<frame inSheet="2" inAnim="2" animType="normal" onFraction="0.69" offFraction="0.99" />

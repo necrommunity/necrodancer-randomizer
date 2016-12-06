@@ -62,6 +62,11 @@ var randomizeND = function(options) {
     options.seed = options.seed || (Math.floor(Math.random() * 16777217)).toString();
     seedrandom(options.seed, { global: true });
 
+    var switches = {
+        enemies: '',
+        items: ''
+    }
+
     var promise = new Promise(function(resolve, reject) {
         fs.readFile(__dirname + '/necrodancer-original.xml', function(err, data) {
             parser.parseString(data, function (err, result) {
@@ -79,8 +84,7 @@ var randomizeND = function(options) {
                         var ranEnemy = getRandomEnemy(clone.necrodancer.enemies[0]);
                         if(!ranEnemy) break;
 
-
-                        console.log('switching '+(enemies[enemy][i].$.friendlyName||(enemy+'-'+i+(' ('+enemies[enemy][i].$.id+')')))+' to '+(ranEnemy.$.friendlyName||ranEnemy.$.id));
+                        switches.enemies += (enemies[enemy][i].$.friendlyName+new Array(23).join(' ')).slice(0, 23)+' → '+(ranEnemy.$.friendlyName||ranEnemy.$.id)+'\n';
                         enemies[enemy][i].$.id = ranEnemy.$.id;
                         var isMiniboss = false;
                         if(enemies[enemy][i].optionalStats && enemies[enemy][i].optionalStats[0].$ && enemies[enemy][i].optionalStats[0].$.miniboss=="True") {
@@ -124,7 +128,7 @@ var randomizeND = function(options) {
                         if(!ranItem) break;
 
 
-                        console.log('switching '+(items[item][i].$.flyaway||(item+'-'+i+(' ('+items[item][i].$.id+')')))+' to '+(ranItem.$.flyaway||ranItem.$.id));
+                        switches.items += (items[item][i].$.flyaway.replace(/(\|\d+\||\|)/g,'')+new Array(28).join(' ')).slice(0, 28)+' → '+ranItem.$.flyaway.replace(/(\|\d+\||\|)/g,'')+'\n';
 
                         var switchArgs = [
                             'chestChance',
@@ -148,7 +152,12 @@ var randomizeND = function(options) {
                 var builder = new xml2js.Builder();
                 var xml = builder.buildObject(origXMLObj);
 
-                xml = '<!-- seed: '+options.seed+' -->\n' + xml;
+                xml =   xml.replace(/^(<\?xml[^?]+\?>)/,'$1\n<!-- seed: '+options.seed+' -->')
+                        + '<!-- \n**** Enemy switches ****\n'
+                        + switches.enemies
+                        + '\n**** Item chances switches ****\n'
+                        + switches.items
+                        + '-->';
 
                 if(options.writeFile) {
                     fs.writeFile(options.dest || __dirname + '/necrodancer.xml', xml);
