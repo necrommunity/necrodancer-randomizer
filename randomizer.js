@@ -87,7 +87,6 @@ var randomizeND = function(options) {
                         if(!ranEnemy) break;
 
                         switches.enemies += (enemies[enemy][i].$.friendlyName+new Array(23).join(' ')).slice(0, 23)+' → '+(ranEnemy.$.friendlyName||ranEnemy.$.id)+'\n';
-                        enemies[enemy][i].$.id = ranEnemy.$.id;
                         var isMiniboss = false;
                         if(enemies[enemy][i].optionalStats && enemies[enemy][i].optionalStats[0].$ && enemies[enemy][i].optionalStats[0].$.miniboss=="True") {
                             isMiniboss = true;
