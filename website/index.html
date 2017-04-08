@@ -3,12 +3,23 @@
 <head>
 	<title>ND Randomizer</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script type="text/javascript">
+		function buildLink() {
+			var seed = document.getElementById('seed').value || 'random',
+				amplified = document.getElementById('amplified').checked;
+			document.getElementById('link').href = "http://localhost:3007/randomizer/" + seed + (amplified ? "/1" : "/0"); 
+
+		}
+	</script>
 </head>
 <body>
 	<h1>Necrodancer Randomizer</h1>
 	<label for="seed">Seed:</label>
-	<input id="seed" name="seed" type="text" placeholder="13375330" oninput="document.getElementById('link').href='http://necrommunity.ovh:3007/randomizer/'+this.value;" />
+	<input id="seed" name="seed" type="text" placeholder="13375330" oninput="buildLink()" />
+	<label for="amplified">Amplified:</label>
+	<input type="checkbox" name="amplified" checked id="amplified" onchange="buildLink()">
 
-	<a href="http://necrommunity.ovh:3007/randomizer/" download id="link">Download</a>
+	<a href="http://localhost:3007/randomizer/random/1" download id="link">Download</a>
+
 </body>
 </html>
