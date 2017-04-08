@@ -7,7 +7,7 @@
 		function buildLink() {
 			var seed = document.getElementById('seed').value || 'random',
 				amplified = document.getElementById('amplified').checked;
-			document.getElementById('link').href = "http://localhost:3007/randomizer/" + seed + (amplified ? "/1" : "/0"); 
+			document.getElementById('link').href = "http://necrommunity.ovh:3007/randomizer/" + seed + (amplified ? "/1" : "/0"); 
 
 		}
 	</script>
@@ -19,7 +19,7 @@
 	<label for="amplified">Amplified:</label>
 	<input type="checkbox" name="amplified" checked id="amplified" onchange="buildLink()">
 
-	<a href="http://localhost:3007/randomizer/random/1" download id="link">Download</a>
+	<a href="http://necrommunity.ovh:3007/randomizer/random/1" download id="link">Download</a>
 
 </body>
 </html>
