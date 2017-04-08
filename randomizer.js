@@ -10,7 +10,7 @@ var randomProperty = function (obj) {
     return keys[ keys.length * Math.random() << 0];
 };
 
-var banned = ['gargoyle', 'ghost'];
+var banned = ['gargoyle', 'ghost', 'pawn', 'queen', 'bishop', 'rook', 'knight'];
 
 var aoeEnemies = ['yeti', 'mushroom'];
 
@@ -67,8 +67,10 @@ var randomizeND = function(options) {
         items: ''
     }
 
+    var xmlToUse = options.original ? '/necrodancer-original.xml' : '/necrodancer-original-amplified.xml';
+
     var promise = new Promise(function(resolve, reject) {
-        fs.readFile(__dirname + '/necrodancer-original.xml', function(err, data) {
+        fs.readFile(__dirname + xmlToUse, function(err, data) {
             parser.parseString(data, function (err, result) {
                 var origXMLObj = result,
                     clone = JSON.parse(JSON.stringify(origXMLObj)),
