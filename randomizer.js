@@ -111,6 +111,10 @@ var randomizeND = function(options) {
                                 enemies[enemy][i].stats[0].$.health = "1";
                             }
                         }
+                        // set food shopkeeper to have only one health to prevent crashing
+                        if(enemies[enemy][i].$.id === "603") {
+                            enemies[enemy][i].stats[0].$.health = "1";
+                        }
                         if(enemies[enemy][i].optionalStats) {
                             if(isMiniboss) enemies[enemy][i].optionalStats[0].$.miniboss = "True";
                             else if(enemies[enemy][i].optionalStats[0].$ && enemies[enemy][i].optionalStats[0].$.miniboss) delete enemies[enemy][i].optionalStats[0].$.miniboss;
